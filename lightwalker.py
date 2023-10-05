@@ -12,14 +12,15 @@ def setup():
         leds.append(led)
 
 def loop():
-    for led in leds:
-        led.on()
-        time.sleep(0.1)
-        led.off()
-    for led in leds[::-1]:
-        led.on()
-        time.sleep(0.1)
-        led.off()
+    while True:
+        for led in leds:
+            led.on()
+            time.sleep(0.1)
+            led.off()
+        for led in leds[::-1]:
+            led.on()
+            time.sleep(0.1)
+            led.off()
 
 
 
